@@ -1,0 +1,6 @@
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [22/Jan/2023 16:35:59] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -

@@ -31,7 +31,7 @@ def generate_qr():
             img.paste(logo, (img.size[0] // 2 - logo.size[0] // 2, img.size[1] // 2 - logo.size[1] // 2), logo)
         except:
             return jsonify(error="The logo url provided is not valid or cannot be opened"), 400
-    else:
+    elif logo_url and "png" not in logo_url:
         return jsonify(error="The Logo must be in png format"),400
 
 

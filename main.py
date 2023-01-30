@@ -1,5 +1,7 @@
 from flask import Flask, request, Response, jsonify
 import qrcode
+from qrcode.image.styledpil import StyledPilImage
+from qrcode.image.styles.moduledrawers.pil import RoundedModuleDrawer, VerticalBarsDrawer, CircleModuleDrawer, GappedSquareModuleDrawer
 from PIL import Image
 import io
 import requests
@@ -10,14 +12,18 @@ app = Flask(__name__)
 def generate_qr():
     url = request.args.get('url')
     logo_url = request.args.get('logo')
+    rounded = request.args.get('rounded')
 
     if not url:
         return jsonify(error="Please provide a valid URL as a query parameter"),400
 
-    qr = qrcode.QRCode(version=5, box_size=20, border=2)
+    qr = qrcode.QRCode(version=3, box_size=20, border=2)
     qr.add_data(url)
     qr.make(fit=True)
-    img = qr.make_image(fill_color="black", back_color="white")
+    if rounded.lower() == "true": 
+        img = qr.make_image(image_factory=StyledPilImage, fill_color="black", back_color="white", module_drawer=RoundedModuleDrawer())
+    else:
+        img = qr.make_image(fill_color="black", back_color="white")
     img = img.convert("RGBA")
     img.putalpha(200)
 

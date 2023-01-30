@@ -4,3 +4,744 @@ DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
 DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
 DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
 INFO:werkzeug:175.156.103.176 - - [22/Jan/2023 16:35:59] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+ERROR:werkzeug:198.199.114.189 - - [22/Jan/2023 22:53:47] code 400, message Bad request syntax ('MGLNDD_170.64.137.43_8000')
+INFO:werkzeug:198.199.114.189 - - [22/Jan/2023 22:53:47] "[35m[1mMGLNDD_170.64.137.43_8000[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:213.179.124.199 - - [22/Jan/2023 23:47:22] "[33mGET / HTTP/1.0[0m" 404 -
+INFO:werkzeug:74.82.47.25 - - [23/Jan/2023 00:56:24] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.45 - - [23/Jan/2023 00:57:22] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.9 - - [23/Jan/2023 00:57:45] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:18:28] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+ERROR:test:Exception on /qr [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/root/apiServer/test.py", line 21, in generate_qr
+    img = qr.make_qr()
+AttributeError: 'QRCode' object has no attribute 'make_qr'
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:18:33] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:18:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:test:Exception on /qr [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/root/apiServer/test.py", line 21, in generate_qr
+    img = qr.make_qr()
+AttributeError: 'QRCode' object has no attribute 'make_qr'
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:18:47] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+ERROR:test:Exception on /qr [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/root/apiServer/test.py", line 21, in generate_qr
+    img = qr.make_qr()
+AttributeError: 'QRCode' object has no attribute 'make_qr'
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:19:16] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:19:34] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:19:34] "GET /qr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:19:34] "GET /qr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:19:34] "GET /qr?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:19:34] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:19:36] "[33mGET /null HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:20:08] "[33mGET /null HTTP/1.1[0m" 404 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:20:10] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:20:10] "GET /qr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:20:10] "GET /qr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:20:10] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:20:10] "GET /qr?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:20:10] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:21:08] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:23:02] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:23:30] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+ERROR:test:Exception on /qr [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/root/apiServer/test.py", line 21, in generate_qr
+    img = qr.make_image(fill_color=qrcode.util.Color(random.randint(0,255),random.randint(0,255),random.randint(0,255)), back_color=qrcode.util.Color(random.randint(0,255),random.randint(0,255),random.randint(0,255)))
+AttributeError: module 'qrcode.util' has no attribute 'Color'
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:23:57] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+ERROR:test:Exception on /qr [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/root/apiServer/test.py", line 21, in generate_qr
+    img = qr.make_image(fill_color=qrcode.util.Color(random.randint(0,255),random.randint(0,255),random.randint(0,255)), back_color=qrcode.util.Color(random.randint(0,255),random.randint(0,255),random.randint(0,255)))
+AttributeError: module 'qrcode.util' has no attribute 'Color'
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:23:59] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+ERROR:test:Exception on /qr [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/dist-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/root/apiServer/test.py", line 21, in generate_qr
+    img = qr.make_image(fill_color=qrcode.util.Color(random.randint(0,255),random.randint(0,255),random.randint(0,255)), back_color=qrcode.util.Color(random.randint(0,255),random.randint(0,255),random.randint(0,255)))
+AttributeError: module 'qrcode.util' has no attribute 'Color'
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:24:02] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:24:13] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:24:13] "GET /qr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:24:13] "GET /qr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:24:13] "GET /qr?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:24:13] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:24:14] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:42:04] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:42:24] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:48:51] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:48:51] "GET /qr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:48:51] "GET /qr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:48:51] "GET /qr?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:48:51] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:48:52] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:49:11] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:49:30] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:50:45] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:51:09] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:51:30] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:52:55] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:52:55] "GET /qr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:52:55] "GET /qr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:52:55] "GET /qr?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:52:55] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:52:56] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:53:09] "[35m[1mGET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1[0m" 500 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:53:09] "GET /qr?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:53:09] "GET /qr?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:53:09] "GET /qr?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:53:09] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:53:09] "GET /qr?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8001/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:53:48] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:54:21] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:54:36] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:56:16] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/test.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:57:22] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 02:57:25] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): rapidapi-prod-apis.s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://rapidapi-prod-apis.s3.amazonaws.com:443 "GET /fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 27564
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'pHYs' 41 9
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 62 8192
+INFO:werkzeug:175.156.103.176 - - [23/Jan/2023 02:57:33] "GET /qr?url=https://www.google.com&logo=https://rapidapi-prod-apis.s3.amazonaws.com/fb04a957-b51a-4b3a-adac-fde614992c1c.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/root/apiServer/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+INFO:werkzeug: * Detected change in '/root/apiServer/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 710-476-279
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 02:58:14] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:3.0.35.31 - - [23/Jan/2023 02:58:22] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 02:58:44] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 03:00:05] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:3.0.35.31 - - [23/Jan/2023 03:00:18] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:3.0.35.31 - - [23/Jan/2023 03:00:49] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 03:01:19] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 03:02:07] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:3.0.35.31 - - [23/Jan/2023 03:02:17] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 03:10:26] "GET /qr?url=www.google.com&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:3.0.35.31 - - [23/Jan/2023 03:11:41] "GET /qr?url=www.google.com&rounded=true&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:13.228.169.5 - - [23/Jan/2023 03:11:58] "GET /qr?url=www.google.com&rounded=true&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.freepnglogos.com:443
+DEBUG:urllib3.connectionpool:https://www.freepnglogos.com:443 "GET /uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 42155
+DEBUG:PIL.PngImagePlugin:STREAM b'IHDR' 16 13
+DEBUG:PIL.PngImagePlugin:STREAM b'bKGD' 41 6
+DEBUG:PIL.PngImagePlugin:b'bKGD' 41 6 (unknown)
+DEBUG:PIL.PngImagePlugin:STREAM b'IDAT' 59 8192
+INFO:werkzeug:3.0.35.31 - - [23/Jan/2023 03:12:09] "GET /qr?url=www.google.com&rounded=true&logo=https%3A%2F%2Fwww.freepnglogos.com%2Fuploads%2Fgoogle-logo-png%2Fgoogle-logo-png-suite-everything-you-need-know-about-google-newest-0.png HTTP/1.1" 200 -
+INFO:werkzeug:167.248.133.119 - - [23/Jan/2023 06:19:41] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.248.133.119 - - [23/Jan/2023 06:19:42] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:167.248.133.119 - - [23/Jan/2023 06:19:42] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.248.133.119 - - [23/Jan/2023 06:19:42] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://170.64.137.43:8000/ (Press CTRL+C to quit)
+ERROR:werkzeug:107.170.227.13 - - [23/Jan/2023 11:09:20] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:107.170.227.13 - - [23/Jan/2023 11:09:20] "[35m[1m {  w|í$¼ñú*éÛ¨µ;zaï á!±¢Á}º­  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:80.66.77.85 - - [23/Jan/2023 14:09:01] code 400, message Bad request syntax ('\x01\x01æ')
+INFO:werkzeug:80.66.77.85 - - [23/Jan/2023 14:09:01] "[35m[1mæ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:194.165.17.15 - - [23/Jan/2023 16:56:43] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:194.165.17.15 - - [23/Jan/2023 16:56:43] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:205.210.31.22 - - [23/Jan/2023 17:18:37] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:107.150.99.248 - - [23/Jan/2023 17:45:13] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:107.150.99.248 - - [23/Jan/2023 17:45:13] "[35m[1m	 3,	«VÔWðÌçâbªÆ¢[óDkHv:/ Nl÷6lÚr/,ïpÏ¶¹"7jÄÝþJÆªC£ÛíF &Ì¨Ì©À/À0À+À,ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:107.150.99.248 - - [23/Jan/2023 17:45:23] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:107.150.99.248 - - [23/Jan/2023 17:45:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:107.150.99.248 - - [23/Jan/2023 17:45:25] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:107.150.99.248 - - [23/Jan/2023 17:45:25] "[33mGET /sitemap.xml HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.225.78.106 - - [23/Jan/2023 18:58:45] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.225.78.106 - - [23/Jan/2023 18:58:45] "[35m[1m {  wÃ	Áø¿ÈnÜÄ^E±hò}á¥Ë¸ìGÅ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:64.225.78.106 - - [23/Jan/2023 18:58:45] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Õ\x1a\xad\x83îéwî\x05T\x12jíQÒ\x80¹f\x81\x90\x1a\x84?\x9bL\x97\x83p,_¨Õ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:64.225.78.106 - - [23/Jan/2023 18:58:45] "[35m[1m {  wÕ­îéwîTjíQÒ¹f?Lp,_¨Õ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.225.78.106 - - [23/Jan/2023 18:58:46] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.225.78.106 - - [23/Jan/2023 18:58:47] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03nÍ¦]\x8d\x8caXlô\x19\x92]h¤\x9d5\x8aº\x1bpÆÐócÓ\x02\x13\x11óA4\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:64.225.78.106 - - [23/Jan/2023 18:58:47] "[35m[1m {  wnÍ¦]aXlô]h¤5ºpÆÐócÓóA4  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.172.38.14 - - [24/Jan/2023 00:53:12] "[33mGET / HTTP/1.0[0m" 404 -
+ERROR:werkzeug:198.199.101.237 - - [24/Jan/2023 02:28:47] code 400, message Bad request syntax ('MGLNDD_170.64.137.43_8000')
+INFO:werkzeug:198.199.101.237 - - [24/Jan/2023 02:28:47] "[35m[1mMGLNDD_170.64.137.43_8000[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:167.94.145.60 - - [24/Jan/2023 07:57:14] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.94.145.60 - - [24/Jan/2023 07:57:14] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:167.94.145.60 - - [24/Jan/2023 07:57:15] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.145.60 - - [24/Jan/2023 07:57:15] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:167.94.138.118 - - [24/Jan/2023 08:35:11] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.94.138.118 - - [24/Jan/2023 08:35:11] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:167.94.138.118 - - [24/Jan/2023 08:35:12] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.138.118 - - [24/Jan/2023 08:35:12] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:216.218.206.69 - - [24/Jan/2023 09:27:47] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.121 - - [24/Jan/2023 09:28:54] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.113 - - [24/Jan/2023 09:29:17] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+ERROR:werkzeug:129.226.209.171 - - [24/Jan/2023 10:12:12] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [24/Jan/2023 10:12:12] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:43.134.234.251 - - [24/Jan/2023 11:53:05] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:129.226.209.171 - - [24/Jan/2023 13:33:54] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [24/Jan/2023 13:33:54] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:162.142.125.221 - - [24/Jan/2023 17:09:56] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.142.125.221 - - [24/Jan/2023 17:09:57] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:162.142.125.221 - - [24/Jan/2023 17:09:58] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:162.142.125.221 - - [24/Jan/2023 17:09:58] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+ERROR:werkzeug:165.22.217.141 - - [24/Jan/2023 20:15:30] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:165.22.217.141 - - [24/Jan/2023 20:15:30] "[35m[1m {  wYDwåBö½TùLp p)	p/íe¨Ájí¸ýZ9  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:165.22.217.141 - - [24/Jan/2023 20:15:31] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:165.22.217.141 - - [24/Jan/2023 20:15:31] "[35m[1m {  w¡À O{Du*ÍÁ¿ ÔÊ"	ßR3à  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:165.22.217.141 - - [24/Jan/2023 20:15:31] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:165.22.217.141 - - [24/Jan/2023 20:15:31] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:165.22.217.141 - - [24/Jan/2023 20:15:31] "[35m[1m {  wcF"J¡gÿ's°Âx²Ð1¶êÔ_·$¨Ì±èe  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:180.149.125.159 - - [24/Jan/2023 22:13:45] "[33mGET /c/ HTTP/1.1[0m" 404 -
+ERROR:werkzeug:129.226.209.171 - - [24/Jan/2023 22:14:37] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [24/Jan/2023 22:14:37] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:185.180.143.143 - - [24/Jan/2023 22:30:44] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:87.236.176.161 - - [24/Jan/2023 23:56:14] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:192.241.232.11 - - [25/Jan/2023 00:00:27] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:129.226.209.171 - - [25/Jan/2023 01:54:31] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [25/Jan/2023 01:54:31] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:198.235.24.57 - - [25/Jan/2023 04:04:15] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:162.243.134.17 - - [25/Jan/2023 06:09:10] code 400, message Bad request syntax ('MGLNDD_170.64.137.43_8000')
+INFO:werkzeug:162.243.134.17 - - [25/Jan/2023 06:09:10] "[35m[1mMGLNDD_170.64.137.43_8000[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:134.209.150.222 - - [25/Jan/2023 09:20:43] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.29 - - [25/Jan/2023 09:26:40] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.53 - - [25/Jan/2023 09:27:42] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+INFO:werkzeug:74.82.47.37 - - [25/Jan/2023 09:28:04] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+ERROR:werkzeug:185.167.97.31 - - [25/Jan/2023 12:58:39] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:185.167.97.31 - - [25/Jan/2023 12:58:39] "[35m[1m u  q_wÁáEÿøO05mÌ^æ"³}²FF6Ç½  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:198.199.118.222 - - [25/Jan/2023 13:20:28] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:198.199.118.222 - - [25/Jan/2023 13:20:28] "[35m[1m {  wS[áyÑ!Ø>ö«¿ý6ý;<²dÁo«Ô  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:172.104.203.200 - - [25/Jan/2023 14:23:58] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:3.110.191.169 - - [25/Jan/2023 15:23:15] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:3.110.191.169 - - [25/Jan/2023 15:23:15] "[35m[1m î  êEa EHXqwþFI¬j~xæ¨îÌ´E=ñn °Æ{áÚ?Ý5S;H}ÕfjEáq". &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:3.110.191.169 - - [25/Jan/2023 15:23:16] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:3.110.191.169 - - [25/Jan/2023 15:23:16] "[35m[1m î  ê¸\"¡zôåêÒO	¤ý.çÊÈè_]ñ©JÇ=m @Ò0ëyo^ÈZaxp¼LbßÚÚ"ý²Bn¬¸ÊÅÞ &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:3.110.191.169 - - [25/Jan/2023 15:23:16] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:3.110.191.169 - - [25/Jan/2023 15:24:51] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:3.110.191.169 - - [25/Jan/2023 15:24:51] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:129.226.209.171 - - [25/Jan/2023 19:40:12] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [25/Jan/2023 19:40:12] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:154.89.5.202 - - [25/Jan/2023 21:50:24] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:129.226.209.171 - - [25/Jan/2023 22:57:19] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [25/Jan/2023 22:57:19] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:04] "[33mHEAD / HTTP/1.0[0m" 404 -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:05] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:06] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:07] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:09] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:10] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:11] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:142.93.151.229 - - [26/Jan/2023 01:19:12] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:129.226.209.171 - - [26/Jan/2023 02:19:04] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [26/Jan/2023 02:19:04] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:129.226.209.171 - - [26/Jan/2023 06:24:39] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+INFO:werkzeug:129.226.209.171 - - [26/Jan/2023 06:24:39] "[35m[1m    c                           [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:64.227.146.42 - - [26/Jan/2023 06:26:07] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.146.42 - - [26/Jan/2023 06:26:07] "[35m[1m {  wØt"|jBëFgÚ®©ýu/k.úL5t^@  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:64.227.146.42 - - [26/Jan/2023 06:26:07] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.146.42 - - [26/Jan/2023 06:26:07] "[35m[1m {  wg¢{ãôXPûvl%üG¾ùkCl:OuôJ¡  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.227.146.42 - - [26/Jan/2023 06:26:07] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.227.146.42 - - [26/Jan/2023 06:26:08] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03êØ\x8ehû'¦0Ï±Ä\x9eºP?È?eCDhÊ¤½[_Ö]ÎæÅ!\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+INFO:werkzeug:64.227.146.42 - - [26/Jan/2023 06:26:08] "[35m[1m {  wêØhû'¦0Ï±ÄºP?È?eCDhÊ¤½[_Ö]ÎæÅ!  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:172.104.11.34 - - [26/Jan/2023 10:04:01] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:172.104.11.34 - - [26/Jan/2023 10:04:01] "[35m[1m   ÛÜÈóïk¬ÍÌÅ§DLâæ/Ì6w7l£ÑôdÙV=n   À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:192.241.209.153 - - [26/Jan/2023 10:14:34] code 400, message Bad request syntax ('MGLNDD_170.64.137.43_8000')
+INFO:werkzeug:192.241.209.153 - - [26/Jan/2023 10:14:34] "[35m[1mMGLNDD_170.64.137.43_8000[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:45.33.87.154 - - [26/Jan/2023 10:16:34] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.94.146.59 - - [26/Jan/2023 14:16:57] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.94.146.59 - - [26/Jan/2023 14:16:58] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:167.94.146.59 - - [26/Jan/2023 14:16:59] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.146.59 - - [26/Jan/2023 14:16:59] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:64.62.197.91 - - [26/Jan/2023 14:23:47] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.62.197.82 - - [26/Jan/2023 14:24:15] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+INFO:werkzeug:64.62.197.77 - - [26/Jan/2023 14:24:18] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+INFO:werkzeug:128.14.133.58 - - [26/Jan/2023 16:45:44] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:198.199.112.107 - - [26/Jan/2023 16:49:58] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:198.199.112.107 - - [26/Jan/2023 16:49:58] "[35m[1m {  w©Z	vÍOô©{eÃ¸gLñA¬ñ.¨îå  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:198.235.24.161 - - [26/Jan/2023 18:19:14] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:62.233.50.179 - - [26/Jan/2023 22:44:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:62.233.50.179 - - [26/Jan/2023 22:44:11] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:179.43.155.157 - - [26/Jan/2023 23:50:47] "[33mPOST /boaform/admin/formLogin HTTP/1.1[0m" 404 -
+ERROR:werkzeug:62.233.50.179 - - [27/Jan/2023 02:39:20] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:62.233.50.179 - - [27/Jan/2023 02:39:20] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:87.236.176.11 - - [27/Jan/2023 03:28:59] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:164.92.223.198 - - [27/Jan/2023 04:07:49] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.86 - - [27/Jan/2023 06:49:12] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.110 - - [27/Jan/2023 06:50:13] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.74 - - [27/Jan/2023 06:50:36] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+ERROR:werkzeug:89.248.163.191 - - [27/Jan/2023 11:35:01] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+INFO:werkzeug:89.248.163.191 - - [27/Jan/2023 11:35:01] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:192.155.90.118 - - [27/Jan/2023 12:15:47] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:01] "[33mGET / HTTP/1.0[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:49] "[33mGET /nmaplowercheck1674822049 HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:49] "[33mGET /sIMS HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:49] "[33mGET http://www.google.com HTTP/1.0[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:49] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:49] "[33mGET /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42 HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:50] "[33mGET /HNAP1 HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:50] "[33mHEAD http://www.google.com HTTP/1.0[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:50] "[33mGET /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000 HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:50] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:50] "[33mCONNECT www.google.com:80 HTTP/1.0[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:55] "[33mHEAD / HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:55] "[33mGET /admin.html HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:55] "[33mGET /pools/default/buckets HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /menu.cfm HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /pools HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mPOST /sdk HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /Portal/Portal.mwsl HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /.git/HEAD HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /docs/cplugError.html/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /Portal0000.htm HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /CSS/Miniweb.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:20:58] "[33mGET /default.pl HTTP/1.1[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:21:00] "[33mGET /__Additional HTTP/1.1[0m" 404 -
+ERROR:werkzeug:172.105.184.153 - - [27/Jan/2023 12:21:00] code 400, message Bad request version ("Î«;Çâ(rª»\x00\x9c\x13\x02\x13\x03\x13\x01\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À\xadÀ£À\x9fÀ]ÀaÀWÀSÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀRÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À")
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:21:00] "[35m[1m  üìégç¦RîdµMSü¾ÖÊTO£U¸ØÐ°n ^_fndæöü`Í°PêÔÎ«;Çâ(rª»  3 9 5 /À,À0 £ Ì©Ì¨ÌªÀ¯À­À£ÀÀ]ÀaÀWÀSÀ+À/ ¢ À®À¬À¢ÀÀ\À`ÀVÀRÀ$À( k jÀsÀw Ä ÃÀ#À' g @ÀrÀv ¾ ½À[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:172.105.184.153 - - [27/Jan/2023 12:21:05] code 400, message Bad request syntax ('\x0e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bbbb0100000001')
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:21:05] "[35m[1m               bbbb0100000001[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:21:43] "[33mGET / HTTP/1.0[0m" 404 -
+INFO:werkzeug:172.105.184.153 - - [27/Jan/2023 12:21:43] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:198.199.115.127 - - [27/Jan/2023 13:51:57] code 400, message Bad request syntax ('MGLNDD_170.64.137.43_8000')
+INFO:werkzeug:198.199.115.127 - - [27/Jan/2023 13:51:57] "[35m[1mMGLNDD_170.64.137.43_8000[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:80.66.77.235 - - [27/Jan/2023 13:54:45] "[33mGET /../../mnt/mtd/Config/Account1 HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.227.134.31 - - [27/Jan/2023 16:37:23] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x05zK*¦²\x1aÈZ`h~(,¾Ó°û>\x8b\x0fñ\x8c\\F\x81\x8b*\x9f7>C\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:64.227.134.31 - - [27/Jan/2023 16:37:23] "[35m[1m {  wzK*¦²ÈZ`h~(,¾Ó°û>ñ\F*7>C  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:64.227.134.31 - - [27/Jan/2023 16:37:23] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.134.31 - - [27/Jan/2023 16:37:23] "[35m[1m {  w¶[²ÅØ/<8áf6Æ$.±t]nª=RUv3î©  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.227.134.31 - - [27/Jan/2023 16:37:24] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.227.134.31 - - [27/Jan/2023 16:37:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8d\x11\x01~\x97\x81®*J!\x8bC\x81ðVaZ½½V=í¶\x90©\x16\xadQ\x96')
+INFO:werkzeug:64.227.134.31 - - [27/Jan/2023 16:37:24] "[35m[1m {  w~®*J!CðVaZ½½V=í¶©­QÅ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:205.210.31.38 - - [27/Jan/2023 21:55:43] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:178.167.80.6 - - [27/Jan/2023 22:19:17] code 400, message Bad request syntax ('\x00\x00\x00àZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x05\x01=K\x00\x00\x01\x01;\x14¨À¤±Á\x13ý²/\x00admin\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x000\x81\x89\x02\x81\x81\x00¬å~')
+INFO:werkzeug:178.167.80.6 - - [27/Jan/2023 22:19:17] "[35m[1m   àZ          =K  ;¨À¤±Áý²/ admin                                           0 ¬å~[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:192.241.238.18 - - [27/Jan/2023 23:54:59] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:192.241.238.18 - - [27/Jan/2023 23:54:59] "[35m[1m {  w^[L+úîö=#ÏÝáY~òëÏ¶Âæ_  Ù£.Ô  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:192.241.233.4 - - [28/Jan/2023 00:01:18] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.248.133.47 - - [28/Jan/2023 02:29:01] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.248.133.47 - - [28/Jan/2023 02:29:02] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:167.248.133.47 - - [28/Jan/2023 02:29:03] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.248.133.47 - - [28/Jan/2023 02:29:03] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:87.236.176.123 - - [28/Jan/2023 06:31:43] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.142.125.221 - - [28/Jan/2023 06:47:15] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:162.142.125.221 - - [28/Jan/2023 06:47:16] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:162.142.125.221 - - [28/Jan/2023 06:47:16] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:162.142.125.221 - - [28/Jan/2023 06:47:16] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+INFO:werkzeug:216.218.206.95 - - [28/Jan/2023 08:50:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.83 - - [28/Jan/2023 08:51:52] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+INFO:werkzeug:216.218.206.123 - - [28/Jan/2023 08:52:15] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+ERROR:werkzeug:185.167.97.229 - - [28/Jan/2023 11:55:04] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00u\x01\x00\x00q\x03\x03kÇ½úµ}ø\x88i-Ï8ÄCÚ¿\x92e\x14±öó¦ï\x88´\x01\x07?jON\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:185.167.97.229 - - [28/Jan/2023 11:55:04] "[35m[1m u  qkÇ½úµ}øi-Ï8ÄCÚ¿e±öó¦ï´?jON  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:162.243.133.15 - - [28/Jan/2023 17:30:28] code 400, message Bad request syntax ('MGLNDD_170.64.137.43_8000')
+INFO:werkzeug:162.243.133.15 - - [28/Jan/2023 17:30:28] "[35m[1mMGLNDD_170.64.137.43_8000[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.12.253.180 - - [28/Jan/2023 19:22:54] code 400, message Bad HTTP/0.9 request type ('Z¥\x01')
+INFO:werkzeug:45.12.253.180 - - [28/Jan/2023 19:22:54] "[35m[1mZ¥     [0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:92.118.39.82 - - [28/Jan/2023 20:03:13] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.94.138.62 - - [28/Jan/2023 23:16:49] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:167.94.138.62 - - [28/Jan/2023 23:16:50] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:167.94.138.62 - - [28/Jan/2023 23:16:50] code 505, message Invalid HTTP version (2.0)
+INFO:werkzeug:167.94.138.62 - - [28/Jan/2023 23:16:50] "[35m[1mPRI * HTTP/2.0[0m" HTTPStatus.HTTP_VERSION_NOT_SUPPORTED -
+ERROR:werkzeug:104.248.9.157 - - [28/Jan/2023 23:57:39] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:104.248.9.157 - - [28/Jan/2023 23:57:39] "[35m[1m {  wî6`ü{£xïüõ© 2\;3ÒÙüÕ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:104.248.9.157 - - [28/Jan/2023 23:57:39] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x8d4¤Ó\x91z\x1aaÈ¥M¥D\x18W\x04\x9c')
+INFO:werkzeug:104.248.9.157 - - [28/Jan/2023 23:57:39] "[35m[1m {  w4¤ÓzaÈ¥M¥DW[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:104.248.9.157 - - [28/Jan/2023 23:57:39] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:104.248.9.157 - - [28/Jan/2023 23:57:40] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Â¹üR,\x17>\x17\x80ÊKñ\x01myðD7QL0\x1aþu\x11]tCÈ\x84\x18!\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+INFO:werkzeug:104.248.9.157 - - [28/Jan/2023 23:57:40] "[35m[1m {  wÂ¹üR,>ÊKñmyðD7QL0þu]tCÈ!  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:208.109.214.50 - - [29/Jan/2023 02:49:11] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:192.241.198.16 - - [29/Jan/2023 03:10:55] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:192.241.198.16 - - [29/Jan/2023 03:10:55] "[35m[1m {  w_§v ºÎò+CXª¼èB¤n$È:ºÃÙ»  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:152.32.141.150 - - [29/Jan/2023 05:38:11] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:152.32.141.150 - - [29/Jan/2023 05:38:13] code 400, message Bad request version ('À\x13À')
+INFO:werkzeug:152.32.141.150 - - [29/Jan/2023 05:38:13] "[35m[1m î  êaq£<Ùì!P»2"; ¡ø¡ea?%ÓÛ÷5Ñ k »8lÐ®Å:6^|_sªÖ©æ}²ß´L &À+À/À,À0Ì©Ì¨À	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:45.12.253.180 - - [29/Jan/2023 07:31:17] code 400, message Bad HTTP/0.9 request type ('Z¥\x01')
+INFO:werkzeug:45.12.253.180 - - [29/Jan/2023 07:31:17] "[35m[1mZ¥     [0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:185.17.0.19 - - [29/Jan/2023 09:14:38] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ÝÎê')
+INFO:werkzeug:185.17.0.19 - - [29/Jan/2023 09:14:38] "[35m[1m î  êÝÎê[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:185.17.0.19 - - [29/Jan/2023 09:14:39] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:65.49.20.110 - - [29/Jan/2023 10:24:40] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:65.49.20.90 - - [29/Jan/2023 10:25:38] "[33mGET http://api.ipify.org/?format=json HTTP/1.1[0m" 404 -
+INFO:werkzeug:65.49.20.106 - - [29/Jan/2023 10:26:00] "[33mCONNECT www.shadowserver.org:443 HTTP/1.1[0m" 404 -
+INFO:werkzeug:154.89.5.119 - - [29/Jan/2023 15:17:59] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:185.122.204.40 - - [29/Jan/2023 18:19:54] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.122.204.40 - - [29/Jan/2023 18:19:54] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:185.122.204.40 - - [29/Jan/2023 20:14:56] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+INFO:werkzeug:185.122.204.40 - - [29/Jan/2023 20:14:56] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:192.241.212.169 - - [29/Jan/2023 21:07:09] code 400, message Bad request syntax ('MGLNDD_170.64.137.43_8000')
+INFO:werkzeug:192.241.212.169 - - [29/Jan/2023 21:07:09] "[35m[1mMGLNDD_170.64.137.43_8000[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:103.203.57.20 - - [29/Jan/2023 22:57:09] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:193.35.18.142 - - [30/Jan/2023 00:59:21] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.227.168.105 - - [30/Jan/2023 04:10:17] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.168.105 - - [30/Jan/2023 04:10:17] "[35m[1m {  wF¨ÏÁ¼&(ØìBs5xIX*Ï¦Êç;kèÊ  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:64.227.168.105 - - [30/Jan/2023 04:10:18] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x065\x90\x84\x88|')
+INFO:werkzeug:64.227.168.105 - - [30/Jan/2023 04:10:18] "[35m[1m {  w5|[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:64.227.168.105 - - [30/Jan/2023 04:10:18] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR:werkzeug:64.227.168.105 - - [30/Jan/2023 04:10:18] code 400, message Bad request version ('À\x14À')
+INFO:werkzeug:64.227.168.105 - - [30/Jan/2023 04:10:18] "[35m[1m {  wÄÊ lßòíjOº½°odS`ÐÄºø7Çp¤	É+}"  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
